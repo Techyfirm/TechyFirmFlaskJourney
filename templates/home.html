@@ -2,18 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TechyFirm</title>
-    <style>
-     body{
-        background: #000000;
-        }
+    <title>{{company_name}}</title>
 
-        #hero_section{
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-        }
+    <style>
+       body{
+        background: #000000;
+        padding: 20px;
+       }
 
         .container {
         max-width: 80%;
@@ -35,6 +30,19 @@
         color: #3E4095
         }
 
+        h4 {
+        font-family : roboto;
+        font-size: 28px;
+        text-align: center;
+        color: #3E4095
+        }
+
+        h5 {
+        font-family : roboto;
+        font-size: 18px;
+        text-align: center;
+        color: #3E4095
+        }
         p {
         font-family : roboto;
         font-size: 18px;
@@ -42,9 +50,9 @@
         color: #CCCCCC
         }
 
-        #img1 {
+        #hero_banner {
         width: 100%;
-        height: 50%;
+        height: 360px;
         object-fit: cover;
 
         }
@@ -58,27 +66,33 @@
     </style>
 </head>
 <body>
-<div id="hero_section" >
-    <h1>TechyFirm</h1>
-    <img id="img1" height="200px" src="static\Lawyer.jpg" width="auto">
+<div class="container" >
+    <h1 class="text-center">{{company_name}}</h1>
+    <img height="360px" id="hero_banner" src="static\Lawyer.jpg" width="auto">
 
     <div class="button_wrapper" style="text-align: center">
         <button id="contact_us">Contact Us</button>
     </div>
 </div>
 <div class="container">
-    <h2>About TechyFirm</h2>
+    <h2 class="text-center">About {{company_name}}</h2>
     <p>In today's digital age, the demand for faster and more reliable communication technologies has reached unprecedented levels. From the early days of basic voice calls to the era of mobile broadband, each generation of wireless communication has brought significant advancements. However, as the world becomes increasingly connected and data-intensive applications continue to emerge, there is a pressing need for a transformative technology that can meet the demands of the future. This is where 5G technology comes into play.
     </p>
 </div>
 <div class="container">
-    <h2>Designs</h2>
+    <h2 class="text-center">Designs</h2>
     <div class="card_wrapper">
-        <img id="designs_img" src="static\Lawyer.jpg" width="100px" height="100px">
-        <h3>Project Title</h3>
-        <p>some description</p>
-        <button id="Project_preview">View Project</button>
+       <div class="card_content_wrapper">
+           {% for design in designs %}
+            <div class="">
+                <img src="static\Lawyer.jpg" height="200px" width=200px">
+                <h4>{{design ['title']}}</h4>
+                <h5>{{design ['description']}}</h5>
+                <button id="Project_preview">View Project</button>
+            </div>
+            {% endfor %}
 
+       </div>
     </div>
     
 
