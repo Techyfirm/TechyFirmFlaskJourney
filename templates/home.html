@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{company_name}}</title>
 
     <style>
@@ -63,17 +64,33 @@
         object-fit: cover;
 
         }
+
+        .preview_button {
+        margin-bottom: 20px;
+        }
+
+        .card {
+        padding: 10px;
+        margin: 0px 10px;
+        border:2px solid Tomato;
+
+        }
+
+
     </style>
 </head>
 <body>
+<div class="hero_section" style="background-image: url('static\Lawyer.jpg');">
 <div class="container" >
     <h1 class="text-center">{{company_name}}</h1>
     <img height="360px" id="hero_banner" src="static\Lawyer.jpg" width="auto">
+    <iframe src ="https://www.w3schools.com" height="300px" width="100%" name="iframe_a"></iframe>
 
     <div class="button_wrapper" style="text-align: center">
         <button id="contact_us">Contact Us</button>
     </div>
 </div>
+</div>>
 <div class="container">
     <h2 class="text-center">About {{company_name}}</h2>
     <p>In today's digital age, the demand for faster and more reliable communication technologies has reached unprecedented levels. From the early days of basic voice calls to the era of mobile broadband, each generation of wireless communication has brought significant advancements. However, as the world becomes increasingly connected and data-intensive applications continue to emerge, there is a pressing need for a transformative technology that can meet the demands of the future. This is where 5G technology comes into play.
@@ -81,20 +98,13 @@
 </div>
 <div class="container">
     <h2 class="text-center">Designs</h2>
-    <div class="card_wrapper">
-       <div class="card_content_wrapper">
-           {% for design in designs %}
-            <div class="">
-                <img src="static\Lawyer.jpg" height="200px" width=200px">
-                <h4>{{design ['title']}}</h4>
-                <h5>{{design ['description']}}</h5>
-                <button id="Project_preview">View Project</button>
-            </div>
-            {% endfor %}
+    <div class="card_content_wrapper " style="display: flex">
+        {% for design in designs %}
+            {% include 'designs.html' %}
+        {% endfor %}
 
-       </div>
     </div>
-    
+
 
 </div>
 </body>

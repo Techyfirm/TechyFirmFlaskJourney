@@ -6,41 +6,32 @@ DESIGNS = [
     {
         'id': 1,
         'title': 'WOTM',
-        'description': "In today's digital age, the demand for faster and more reliable communication technologies "
-                       "has reached unprecedented levels. From the early days of basic voice calls to the era of "
-                       "mobile broadband, each generation of wireless communication has brought significant "
-                       "advancements. However, as the world becomes increasingly connected and data-intensive "
-                       "applications continue to emerge, there is a pressing need for a transformative technology "
-                       "that can meet the demands of the future. This is where 5G technology comes into play.",
+        'description': "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
         'id': 2,
         'title': 'FAWC',
-        'description': "In today's digital age, the demand for faster and more reliable communication technologies "
-                       "has reached unprecedented levels. From the early days of basic voice calls to the era of "
-                       "mobile broadband, each generation of wireless communication has brought significant "
-                       "advancements. However, as the world becomes increasingly connected and data-intensive "
-                       "applications continue to emerge, there is a pressing need for a transformative technology "
-                       "that can meet the demands of the future. This is where 5G technology comes into play.",
+        'description': "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     },
     {
         'id': 3,
         'title': 'TECHYFIRM',
-        'description': "In today's digital age, the demand for faster and more reliable communication technologies "
-                       "has reached unprecedented levels. From the early days of basic voice calls to the era of "
-                       "mobile broadband, each generation of wireless communication has brought significant "
-                       "advancements. However, as the world becomes increasingly connected and data-intensive "
-                       "applications continue to emerge, there is a pressing need for a transformative technology "
-                       "that can meet the demands of the future. This is where 5G technology comes into play.",
+        'description': "Some quick example text to build on the card title and make up the bulk of the card's content.",
 
     }
 ]
 
+
 @app.route('/')
 def index():
     return render_template('home.html', designs=DESIGNS, company_name="TechyFirm")
+
+
+@app.route('/api/designs')
+def design_list():
+    return jsonify(DESIGNS)
 
 
 if __name__ == '__main__':
