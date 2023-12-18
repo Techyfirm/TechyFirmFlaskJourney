@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{company_name}}</title>
-
-    <style>
+    <link rel="stylesheet" href="static\stylesheet.css">
+    <script src="static\scripts.js"></script>
+    <!--<style>
        body{
         background: #000000;
         padding: 20px;
@@ -77,14 +78,14 @@
         }
 
 
-    </style>
+    </style>-->
 </head>
 <body>
 <div class="hero_section" style="background-image: url('static\Lawyer.jpg');">
 <div class="container" >
     <h1 class="text-center">{{company_name}}</h1>
     <img height="360px" id="hero_banner" src="static\Lawyer.jpg" width="auto">
-    <iframe src ="https://www.w3schools.com" height="300px" width="100%" name="iframe_a"></iframe>
+    <!--<iframe src ="https://www.w3schools.com" height="300px" width="100%" name="iframe_a"></iframe>-->
 
     <div class="button_wrapper" style="text-align: center">
         <button id="contact_us">Contact Us</button>
@@ -96,7 +97,7 @@
     <p>In today's digital age, the demand for faster and more reliable communication technologies has reached unprecedented levels. From the early days of basic voice calls to the era of mobile broadband, each generation of wireless communication has brought significant advancements. However, as the world becomes increasingly connected and data-intensive applications continue to emerge, there is a pressing need for a transformative technology that can meet the demands of the future. This is where 5G technology comes into play.
     </p>
 </div>
-<div class="container">
+<div class="container" id="design_section">
     <h2 class="text-center">Designs</h2>
     <div class="card_content_wrapper " style="display: flex">
         {% for design in designs %}
@@ -107,5 +108,17 @@
 
 
 </div>
+<section id="contact" class="section">
+    <div class="container" id="contact_wrapper">
+        {% include 'contactform.html' %}
+
+    </div>
+</section>
+<section id="canvas_section">
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        
+    </canvas>
+
+</section>
 </body>
 </html>
