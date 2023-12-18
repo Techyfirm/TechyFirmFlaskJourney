@@ -1,0 +1,84 @@
+ body{
+    background: #000000;
+     padding: 20px;
+       }
+
+ .container {
+    max-width: 80%;
+    margin: 0 auto
+
+    }
+
+h1 {
+ font-family : roboto;
+ font-size: 40px;
+ text-align: center;
+ color: #ffaa0b
+  }
+
+h2 {
+    font-family : roboto;
+    font-size: 32px;
+    text-align: center;
+    color: #3E4095
+  }
+
+h4 {
+    font-family : roboto;
+    font-size: 28px;
+    text-align: center;
+    color: #3E4095
+    }
+
+h5 {
+     font-family : roboto;
+     font-size: 18px;
+     text-align: center;
+     color: #3E4095
+    }
+p {
+     font-family : roboto;
+     font-size: 18px;
+     text-align: justify;
+     color: #CCCCCC
+        }
+
+#hero_banner {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+
+    }
+
+#designs_img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+        }
+
+.preview_button {
+    margin-bottom: 20px;
+        }
+
+.card {
+    padding: 10px;
+    margin: 0px 10px;
+    border:2px solid Tomato;
+
+        }
+#contact_wrapper {
+    font-family: roboto;
+    font-size: 14px;
+    text-align: ;
+    color: #3E4095;
+    width:80%
+}
+section {
+    padding: 20px;
+    margin-top: 40px;
+}
+form {
+    width: 100%;
+
+}
